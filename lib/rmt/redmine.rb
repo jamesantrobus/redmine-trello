@@ -10,6 +10,7 @@ require 'ox'
 module RMT
 class Redmine
   module Status
+    New = 1
     Unreviewed = 10
   end
 

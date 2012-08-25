@@ -12,7 +12,7 @@ module RMT
 
     def data_for(trello)
       target_list = trello.target_list_id
-      issues = @redmine_client.get_issues_for_project(@project_id, :status => RMT::Redmine::Status::Unreviewed)
+      issues = @redmine_client.get_issues_for_project(@project_id, :status => RMT::Redmine::Status::New)
       issues.collect { |ticket| SynchronizationData.new(ticket[:id],
                                                         ticket[:subject],
                                                         ticket[:description],
